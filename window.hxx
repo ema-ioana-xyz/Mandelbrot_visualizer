@@ -36,4 +36,3 @@ class Window {
         int getDrawingWidth();
 };
 };
-
