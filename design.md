@@ -1,6 +1,6 @@
 # A Mandelbrot set visualizer
 
-I want to draw an approxiamtion of the Mandelbrot set, meaning that for a rectangular region of the 
+I want to draw an approximation of the Mandelbrot set, meaning that for a rectangular region of the 
 complex plane, I will map each point to a color, depending on how fast it shoots off to infinity
 when iterated under the iterated function
 $$f_c(x) = x^2 + c$$
