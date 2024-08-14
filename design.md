@@ -3,17 +3,21 @@
 I want to draw an approximation of the Mandelbrot set, meaning that for a rectangular region of the 
 complex plane, I will map each point to a color, depending on how fast it shoots off to infinity
 when iterated under the iterated function
+
 $$f_c(x) = x^2 + c$$
+
 where $c$ is the complex number in consideration, and $x$ is the result of the previous iteration,
 with an initial value of $0$.
 
 In a more program-oriented view, this function can be recursively described as
+
 $$f(x, i)=
 \begin{cases}
     f(x^2 + c, i-1), & \text{if } i > 0 \\
     x, & \text{if } i = 0
 \end{cases}
 $$
+
 and the initial call is 
 $f(c, \text{iteration-count})$
 
@@ -21,6 +25,7 @@ $f(c, \text{iteration-count})$
 ## Coloring the outputs of this function
 We are aiming only for an approximation of this set. As such, we can consider that a number
 has shot off to infinity with reasonable confidence if its absolute value has surpassed a certain number, say, $N$. Thus, our map could be 
+
 $$
 \text{color}(c) = 
 \begin{cases}
